@@ -1,0 +1,231 @@
+*, 
+*::before, 
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+    --Grayish-Blue: hsl(212, 23%, 69%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+body {
+    margin: 0;
+    font-size: 1rem;
+    font-family: 'Manrope', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--Light-Grayish-Blue);
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 22.4375rem;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    padding: 40px 40px 30px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.drawers {
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+}
+
+h1 {
+    color: var(--Very-Dark-Grayish-Blue);
+    font-size: 1.1rem;
+    margin: 0;
+    line-height: 1.7rem;
+}
+
+p {
+    line-height: 1.5rem;
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--Desaturated-Dark-Blue);
+}
+
+.author-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    position: relative;
+}
+
+.author-section div {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 0.4rem;
+}
+
+.author-section div h2 {
+    color: var(--Very-Dark-Grayish-Blue);
+    font-size: 0.9rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+.author-section div span {
+    color: var(--Grayish-Blue);
+    font-size: 0.85rem
+}
+
+.michelle {
+    border-radius: 50%;
+    width: 50px;
+}
+
+button {
+    border-radius: 50%;
+    border: none;
+    width: 35px;
+    height: 35px;
+    background-color: var(--Light-Grayish-Blue);
+    margin-left: auto;
+    cursor: pointer
+}
+
+button img {
+    width: 15px;
+    height: 15px;
+    display: block;
+    margin: auto;
+}
+
+.share-section {
+    background-color: var(--Very-Dark-Grayish-Blue);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+
+.share-section div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.share-section span {
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    color: var(--Grayish-Blue);
+    font-size: 0.9rem;
+}
+
+.share-section img {
+    width: 22px;
+    cursor: pointer;
+}
+
+.share-section button {
+    background-color: var(--Grayish-Blue);
+}
+
+.share-popup {
+    background-color: var(--Very-Dark-Grayish-Blue);
+    position: absolute;
+    bottom: 70px;   
+    right: -128px;   
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    gap: 20px !important;
+    padding: 20px 50px;
+    align-items: center;
+    z-index: 99;
+    border-radius: 10px;
+}
+
+.share-popup::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid var(--Very-Dark-Grayish-Blue);
+}
+
+.share-popup span {
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    color: var(--Grayish-Blue);
+    font-size: 0.9rem;
+}
+
+.share-popup img {
+    width: 22px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.attribution { 
+    font-size: 0.6875rem; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 768px) {
+    .main-container {
+        flex-direction: row;
+        max-width: 60rem;
+        overflow: visible;
+    }
+
+    .container {
+        padding: 50px;
+        flex: 1;
+    }
+
+    .drawers {
+        height: auto;
+        width: 40%;
+        object-fit: cover;
+        border-radius: 10px 0 0 10px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+}
